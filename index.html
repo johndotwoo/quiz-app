@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Computer Gaming Quiz!</title>
+    <!--Meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'
+     type='text/css'>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- top navbar header -->    
+    <header>
+    	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- navbar button appears with smaller viewing port -->
+                    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- navbar title to the left -->
+                    <a class="navbar-brand" href="#">Classic gaming quiz!</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <!-- navbar links to the right -->
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#about" data-toggle="modal" data-target="#basicModal">About this quiz!</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- quiz questions and content -->
+    <div class="container">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                    <h2>What is your favorite Atari game?</h2>
+                </div>
+                <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4">
+                    <a href="#" class="thumbnail">
+                        <img src="http://upload.wikimedia.org/wikipedia/en/thumb/0/02/Atari-2600-Wood-4Sw-Set.png/320px-Atari-2600-Wood-4Sw-Set.png" alt="Atari 2600 console">
+                    </a>
+                </div>                
+            </div>
+            <hr />
+            <div class="row form-group">
+                <label class="col-md-3 control-label" for="radios">Answers</label>
+                    <div class="col-md-3">
+                        <div class="radio">
+                            <label for="radios-0">
+                                <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
+                                Pong
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="radios-1">
+                                <input type="radio" name="radios" id="radios-1" value="2">
+                                Space Invaders
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="radios-2">
+                            <input type="radio" name="radios" id="radios-2" value="3">
+                                Pitfall
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label for="radios-3">
+                            <input type="radio" name="radios" id="radios-3" value="4">
+                                Missile Command
+                            </label>
+                        </div>
+                        <hr />
+                        <button type="button" class="btn btn-default">Submit answer</button>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal help window -->
+    <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+            <h2 class="modal-title" id="myModalLabel">Classic computer + video gaming quiz!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Are you a true gamer? Test your knowledge of classic computer and video gaming with this quiz! Channel your inner PacMan because we have five awesome questions for you to test your knowledge with. Get it on like Donkey Kong!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ever so sticky footer -->
+    <footer>
+        <div id="footer">
+            <div class="container">
+                <p class="text-muted">crafted with pride by johndotwoo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- My JavaScript -->
+    <script src="app.js"></script>
+
+</body>
+</html>
