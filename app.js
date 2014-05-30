@@ -31,6 +31,16 @@ $(document).ready(function() {
 	// initialize global variables
 	var totalCorrectAnswers = 0;
 	var totalNumberQuestions = allQuestions.length;
-	console.log(totalCorrectAnswers);
-	console.log(totalNumberQuestions);
+
+	//generate first question
+	generateFirstQuestion();
+
+	function generateFirstQuestion() {
+		$('#photo').append('<img src="images/01.gif">');
+		$('#question').text(allQuestions[0].question);
+		$('#answer1').text(allQuestions[0].choices[0]);
+		$('#answer2').text(allQuestions[0].choices[1]);
+		$('#answer3').text(allQuestions[0].choices[2]);
+		$('#answer4').text(allQuestions[0].choices[3]);
+	};
 });

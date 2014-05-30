@@ -48,44 +48,43 @@
         <div class="jumbotron">
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
-                    <h2>What is your favorite Atari game?</h2>
+                    <h2 id="question"></h2>
                 </div>
                 <div class="col-xs-8 col-sm-6 col-md-4 col-lg-4">
-                    <a href="#" class="thumbnail">
-                        <img src="http://upload.wikimedia.org/wikipedia/en/thumb/0/02/Atari-2600-Wood-4Sw-Set.png/320px-Atari-2600-Wood-4Sw-Set.png" alt="Atari 2600 console">
+                    <a href="#" class="thumbnail" id="photo">
                     </a>
                 </div>                
             </div>
             <hr />
             <div class="row form-group">
                 <label class="col-md-3 control-label" for="radios">Answers</label>
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <div class="radio">
                         <label for="radios-0">
-                            <input type="radio" name="radios" id="radios-0" value="1" checked="checked">
-                            Pong
+                            <input type="radio" name="radios" id="radios-0" value="1">
+                                <span id="answer1">answer1</span>
                         </label>
                     </div>
                     <div class="radio">
                         <label for="radios-1">
                             <input type="radio" name="radios" id="radios-1" value="2">
-                            Space Invaders
+                            <span id="answer2">answer2</span>
                         </label>
                     </div>
                     <div class="radio">
                         <label for="radios-2">
                         <input type="radio" name="radios" id="radios-2" value="3">
-                            Pitfall
+                            <span id="answer3"></span>
                         </label>
                     </div>
                     <div class="radio">
                         <label for="radios-3">
                         <input type="radio" name="radios" id="radios-3" value="4">
-                            Missile Command
+                            <span id="answer4"></span>
                         </label>
                     </div>
                     <hr />
-                    <button type="button" class="btn btn-default">Submit answer</button>
+                    <button type="button" class="btn btn-default" id="submitAnswer">Submit answer</button>
                 </div>
             </div>
         </div>
