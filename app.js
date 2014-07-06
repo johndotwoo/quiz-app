@@ -98,7 +98,10 @@ $(document).ready(function() {
   	// action on clicking restart quiz
   	$('#restartQuiz').click(function() {
 		questionIndex = 0;
-  		totalCorrectAnswer = 0;
+  		totalCorrectAnswers = 0;
+  		$('#gameImage').remove();
+		$('#restartQuiz').hide();  		
+  		$('#submitAnswer').show();
   		generateQuestions();
   	});
 
@@ -183,7 +186,6 @@ $(document).ready(function() {
 			$('#nextQuestion').hide();
 			$('#showScore').hide();
 			$('#restartQuiz').show();
-			$('#gameImage').remove();
 		}
 
 		questionIndex++;
