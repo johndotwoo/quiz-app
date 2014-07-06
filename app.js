@@ -49,8 +49,9 @@ $(document).ready(function() {
 	var totalNumberQuestions = allQuestions.length;
 
 	// call to generate questions
-	$("#nextQuestion").hide();
-	$("#restartQuiz").hide();
+	$('#nextQuestion').hide();
+	$('#restartQuiz').hide();
+	$('#showScore').hide();
    	generateQuestions();
 
 	// question generation function w/ logic
@@ -84,8 +85,20 @@ $(document).ready(function() {
 
 	// action on clicking next question
   	$('#nextQuestion').click(function() {
-  		$("#submitAnswer").show();
-        $("#nextQuestion").hide();
+  		$('#submitAnswer').show();
+        $('#nextQuestion').hide();
+  		generateQuestions();
+  	});
+
+  	// action on clicking show score
+  	$('#showScore').click(function() {
+		checkAnswer();
+  	});
+
+  	// action on clicking restart quiz
+  	$('#restartQuiz').click(function() {
+		questionIndex = 0;
+  		totalCorrectAnswer = 0;
   		generateQuestions();
   	});
 
@@ -109,59 +122,69 @@ $(document).ready(function() {
 			if(radioButtonValue == allQuestions[0].correctAnswer) {
 				$('#question').text(allQuestions[questionIndex].correctAnswerBlurb);
 				totalCorrectAnswers++;
-				console.log("total correct answers so far: " + totalCorrectAnswers);
 			}
 			else {
 				$('#question').text(allQuestions[questionIndex].incorrectAnswerBlurb);
 			}
+			$('#submitAnswer').hide();
+        	$('#nextQuestion').show();
 		}
 		if(questionIndex == 1) {
 			$('#gameImage').replaceWith('<img id="gameImage" src="images/02-correct.gif">');
 			if(radioButtonValue == allQuestions[1].correctAnswer) {
 				$('#question').text(allQuestions[questionIndex].correctAnswerBlurb);
 				totalCorrectAnswers++;
-				console.log("total correct answers so far: " + totalCorrectAnswers);
 			}
 			else {
 				$('#question').text(allQuestions[questionIndex].incorrectAnswerBlurb);
 			}
+			$('#submitAnswer').hide();
+        	$('#nextQuestion').show();
 		}
 		if(questionIndex == 2) {
 			$('#gameImage').replaceWith('<img id="gameImage" src="images/03-correct.gif">');
 			if(radioButtonValue == allQuestions[2].correctAnswer) {
 				$('#question').text(allQuestions[questionIndex].correctAnswerBlurb);
 				totalCorrectAnswers++;
-				console.log("total correct answers so far: " + totalCorrectAnswers);
 			}
 			else {
 				$('#question').text(allQuestions[questionIndex].incorrectAnswerBlurb);
 			}
+			$('#submitAnswer').hide();
+        	$('#nextQuestion').show();
 		}
 		if(questionIndex == 3) {
 			$('#gameImage').replaceWith('<img id="gameImage" src="images/04-correct.jpg">');
 			if(radioButtonValue == allQuestions[3].correctAnswer) {
 				$('#question').text(allQuestions[questionIndex].correctAnswerBlurb);
 				totalCorrectAnswers++;
-				console.log("total correct answers so far: " + totalCorrectAnswers);
 			}
 			else {
 				$('#question').text(allQuestions[questionIndex].incorrectAnswerBlurb);
 			}
+			$('#submitAnswer').hide();
+        	$('#nextQuestion').show();
 		}
 		if(questionIndex == 4) {
 			$('#gameImage').replaceWith('<img id="gameImage" src="images/05-correct.jpg">');
 			if(radioButtonValue == allQuestions[4].correctAnswer) {
 				$('#question').text(allQuestions[questionIndex].correctAnswerBlurb);
 				totalCorrectAnswers++;
-				console.log("total correct answers so far: " + totalCorrectAnswers);
 			}
 			else {
 				$('#question').text(allQuestions[questionIndex].incorrectAnswerBlurb);
 			}
+			$('#submitAnswer').hide();
+        	$('#showScore').show();
 		}
 
-		$("#submitAnswer").hide();
-        $("#nextQuestion").show();
+		if(questionIndex == 5) {
+			$('#question').text("Congrats on finishing the quiz! You got " + totalCorrectAnswers + " of 5 questions correct!");
+			$('#nextQuestion').hide();
+			$('#showScore').hide();
+			$('#restartQuiz').show();
+			$('#gameImage').remove();
+		}
 
 		questionIndex++;
   	}
